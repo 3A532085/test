@@ -21,5 +21,5 @@ function addToArray(value, array = []) {
 const result1 = addToArray(1);
 const result2 = addToArray(2);
 
-console.log(result1); // [1, 2]
+console.log(result1); // [1, 2]test
 console.log(result2); // [1, 2]
