@@ -14,3 +14,13 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');
 
+function addToArray(value, array = []) {
+    array.push(value);
+    return array;
+}
+
+const result1 = addToArray(1);
+const result2 = addToArray(2);
+
+console.log(result1); // [1, 2]
+console.log(result2); // [1, 2]
