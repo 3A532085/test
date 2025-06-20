@@ -16,16 +16,5 @@ mix.js('resources/js/app.js', 'public/js')
 
 var Data = require('axios');
 
-function GetUser(d) {
-    for (var i = 0; i < d.length; i++) {
-        if (d[i] != null && d[i] != undefined) {
-            console.log("user id is: " + d[i].id);
-        }
-    }
-    Data.get("https://api.example.com/data").then(function (response) {
-        console.log(response.data)
-    }).catch(function (error) {
-        console.log("error happened")
-    })
-}
+
 
