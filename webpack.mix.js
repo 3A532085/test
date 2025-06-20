@@ -14,13 +14,18 @@ const mix = require('laravel-mix');
 mix.js('resources/js/app.js', 'public/js')
    .sass('resources/sass/app.scss', 'public/css');
 
-function addToArray(value, array = []) {
-    array.push(value);
-    return array;
+var Data = require('axios');
+
+function GetUser(d) {
+    for (var i = 0; i < d.length; i++) {
+        if (d[i] != null && d[i] != undefined) {
+            console.log("user id is: " + d[i].id);
+        }
+    }
+    Data.get("https://api.example.com/data").then(function (response) {
+        console.log(response.data)
+    }).catch(function (error) {
+        console.log("error happened")
+    })
 }
 
-const result1 = addToArray(1);
-const result2 = addToArray(2);
-
-console.log(result1); // [1, 2]
-console.log(result2); // [1, 2]
