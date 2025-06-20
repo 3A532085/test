@@ -16,8 +16,8 @@ mix.js('resources/js/app.js', 'public/js')
 
 var Data = require('axios');
 
-function getUser(d) {
-    for (let i = 0; i < d.length; i++) {
+function GetUser(d) {
+    for (var i = 0; i < d.length; i++) {
         if (d[i] != null && d[i] != undefined) {
             console.log("user id is: " + d[i].id);
         }
