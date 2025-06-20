@@ -19,7 +19,7 @@ var Data = require('axios');
 
 
 function GetUser(d) {
-    for (var i = 0; i <= d.length; i++) {
+    for (var i = 0; i < d.length; i++) {
         if (d[i] != null && d[i] != undefined) {
             console.log("user id is: " + d[i].id);
         }
